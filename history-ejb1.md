@@ -3,8 +3,23 @@
 
 upper is newer.
 
+- [implemented Info2Service ejb](#implemented-info2service-ejb)
 - [converted to Maven project](#converted-to-maven-project)
 - [created project](#created-project)
+
+## implemented Info2Service ejb
+
+- Eclipse: pom.xml 依存関係＞追加
+  - javax.ejb
+  - ejb-api
+  - 3.0
+  - provided
+- added
+  - ejb1/ejbModule/com/yaso/ejb1/Info2Service.java
+  - ejb1/ejbModule/com/yaso/ejb1/Info2ServiceBean.java
+  - ejb1/ejbModule/com/yaso/ejb1/Info2ServiceHome.java
+- edited
+  - ejb1/ejbModule/META-INF/ejb-jar.xml
 
 ## converted to Maven project
 
