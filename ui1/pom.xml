@@ -17,5 +17,11 @@
   		<version>21.0.0.2</version>
   		<scope>provided</scope>
   	</dependency>
+  	<dependency>
+  		<groupId>com.ibm.websphere.javaee.ejb</groupId>
+  		<artifactId>ejb.3.2</artifactId>
+  		<version>21.0.0.2</version>
+  		<scope>provided</scope>
+  	</dependency>
   </dependencies>
 </project>

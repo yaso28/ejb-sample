@@ -5,6 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>ejb</packaging>
   <build>
+  	<finalName>ejb1</finalName>
     <sourceDirectory>ejbModule</sourceDirectory>
     <resources>
       <resource>

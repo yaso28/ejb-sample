@@ -3,8 +3,14 @@
 
 upper is newer.
 
+- [added ejb ref](#added-ejb-ref)
 - [implemented info servlet](#implemented-info-servlet)
 - [created project](#created-project)
+
+## added ejb ref
+
+- edited ui1/pom.xml
+- edited ui1/src/main/java/com/yaso/ui1/InfoServlet.java
 
 ## implemented info servlet
 
