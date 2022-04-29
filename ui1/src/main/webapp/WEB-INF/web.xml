@@ -4,4 +4,20 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>InfoServlet</servlet-name>
+  	<display-name>InfoServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.yaso.ui1.InfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>InfoServlet</servlet-name>
+  	<url-pattern>/info</url-pattern>
+  </servlet-mapping>
+  <ejb-ref>
+  	<ejb-ref-name>ejb/Info2Service</ejb-ref-name>
+  	<ejb-ref-type>Session</ejb-ref-type>
+  	<home>com.yaso.ejb1.Info2ServiceHome</home>
+  	<remote>com.yaso.ejb1.Info2Service</remote>
+  </ejb-ref>
 </web-app>
