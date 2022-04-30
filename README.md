@@ -61,3 +61,8 @@ kustomize build kustomize/overlays/dev-ui1-1-ejb1-3 | kubectl apply
 ```bash
 curl <URL:PORT>/ui1/info
 ```
+
+## テストプログラム
+
+- [tester](tester/)
+  - [開発履歴](history-tester.md)
