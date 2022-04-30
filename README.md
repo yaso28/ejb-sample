@@ -66,3 +66,10 @@ curl <URL:PORT>/ui1/info
 
 - [tester](tester/)
   - [開発履歴](history-tester.md)
+
+ui1 info
+
+```bash
+cd tester
+node index.js ui1 info
+```
