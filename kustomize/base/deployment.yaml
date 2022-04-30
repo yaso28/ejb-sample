@@ -18,6 +18,11 @@ spec:
         - name: ui1
           image: mdboetco.azurecr.io/ejb-sample-ui1:1.0
           imagePullPolicy: IfNotPresent
+          env:
+            - name: PODNAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
           ports:
             - containerPort: 9080
               protocol: TCP
@@ -42,6 +47,11 @@ spec:
         - name: ejb1
           image: mdboetco.azurecr.io/ejb-sample-ejb1:1.0
           imagePullPolicy: IfNotPresent
+          env:
+            - name: PODNAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
           ports:
             - containerPort: 2829
               protocol: TCP

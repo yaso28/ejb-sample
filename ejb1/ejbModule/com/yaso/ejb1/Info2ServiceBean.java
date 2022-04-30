@@ -9,7 +9,10 @@ import javax.ejb.SessionContext;
 public class Info2ServiceBean implements SessionBean {
 
 	public String getHostname() {
-		String hostname = System.getenv("HOSTNAME");
+		String hostname = System.getenv("PODNAME");
+		if (hostname == null) {
+			hostname = System.getenv("HOSTNAME");
+		}
 		if (hostname == null) {
 			hostname = "NULL-EJB";
 		}

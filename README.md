@@ -14,6 +14,12 @@
 
 > 各`.sh`ファイルは`chmod +x ***.sh`で実行可能にしてから利用してください。
 
+ビルドしたモジュールをdockerディレクトリにコピー
+
+```bash
+./docker/copy-modules.sh
+```
+
 ベースイメージ
 
 ```bash
