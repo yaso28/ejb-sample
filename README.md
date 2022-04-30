@@ -47,5 +47,17 @@ ui1
 ## Kubernetes
 
 ```bash
-kustomize build kustomize/overlays/dev | kubectl apply -f -
+kustomize build kustomize/overlays/dev-ui1-1-ejb1-1 | kubectl apply
+ -f -
+```
+
+```bash
+kustomize build kustomize/overlays/dev-ui1-1-ejb1-3 | kubectl apply
+ -f -
+```
+
+## 動作確認
+
+```bash
+curl <URL:PORT>/ui1/info
 ```
