@@ -1,6 +1,8 @@
 <!-- omit in toc -->
 # EJB Sample
 
+リモートEJBに関する考察は[こちら](about-ejb.md)
+
 ## プログラム
 
 - [ejb1](ejb1/)
@@ -47,13 +49,11 @@ ui1
 ## Kubernetes
 
 ```bash
-kustomize build kustomize/overlays/dev-ui1-1-ejb1-1 | kubectl apply
- -f -
+kustomize build kustomize/overlays/dev-ui1-1-ejb1-1 | kubectl apply -f -
 ```
 
 ```bash
-kustomize build kustomize/overlays/dev-ui1-1-ejb1-3 | kubectl apply
- -f -
+kustomize build kustomize/overlays/dev-ui1-1-ejb1-3 | kubectl apply -f -
 ```
 
 ## 動作確認
@@ -67,9 +67,15 @@ curl <URL:PORT>/ui1/info
 - [tester](tester/)
   - [開発履歴](history-tester.md)
 
-ui1 info
+インストール
 
 ```bash
 cd tester
+npm ci
+```
+
+ui1 infoテスト
+
+```bash
 node index.js ui1 info
 ```
