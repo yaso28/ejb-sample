@@ -1,0 +1,31 @@
+<server description="new server">
+
+    <!-- Enable features --><featureManager>
+        <feature>jsp-2.3</feature>
+        <feature>localConnector-1.0</feature>
+        <feature>servlet-4.0</feature>
+        <feature>ejbLite-3.2</feature>
+        <feature>ejbHome-3.2</feature>
+        <feature>ejbRemote-3.2</feature>
+        <feature>jndi-1.0</feature>
+    </featureManager>
+    
+	<!-- To access this server from a remote client add a host attribute to the following element, e.g. host="*" --><httpEndpoint httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint" />
+
+	<!-- Automatically expand WAR files and EAR files --><applicationManager autoExpand="true" />
+
+	<library id="ejb1">
+		<file name="ejb1.jar"></file>
+	</library>
+
+	<!-- Default SSL configuration enables trust for default certificates from the Java runtime -->
+    <ssl id="defaultSSLConfig" trustDefaultCerts="true"/>
+
+    <webApplication location="ui1.war" contextRoot="ui1">
+    	<classloader privateLibraryRef="ejb1"></classloader>
+    	<web-bnd>
+    		<ejb-ref name="ejb/Info2Service" binding-name="corbaname::ejb1:2829#ejb/global/ejb1/Info2Service!com.yaso.ejb1.Info2ServiceHome"></ejb-ref>
+    	</web-bnd>
+    </webApplication>
+
+</server>

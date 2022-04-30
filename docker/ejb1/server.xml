@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="new server">
+
+    <!-- Enable features -->
+    <featureManager>
+        <feature>jsp-2.3</feature>
+        <feature>localConnector-1.0</feature>
+        <feature>servlet-4.0</feature>
+        <feature>ejbLite-3.2</feature>
+        <feature>ejbHome-3.2</feature>
+        <feature>ejbRemote-3.2</feature>
+        <feature>jndi-1.0</feature>
+    </featureManager>
+
+    <!-- To access this server from a remote client add a host attribute to the following element, e.g. host="*" -->
+    <httpEndpoint id="defaultHttpEndpoint"
+                  httpPort="9080"
+                  httpsPort="9443" />
+
+    <!-- Automatically expand WAR files and EAR files -->
+    <applicationManager autoExpand="true"/>
+
+    <!-- Default SSL configuration enables trust for default certificates from the Java runtime -->
+    <ssl id="defaultSSLConfig" trustDefaultCerts="true" />
+
+    <iiopEndpoint id="defaultIiopEndpoint" iiopPort="2829" host="ejb1" />
+
+    <ejbApplication location="ejb1.jar">
+    	<ejb-jar-bnd moduleName="ejb1.jar">
+    		<session name="Info2Service" simple-binding-name="ejb/Info2Service"></session>
+    	</ejb-jar-bnd>
+    </ejbApplication>
+</server>

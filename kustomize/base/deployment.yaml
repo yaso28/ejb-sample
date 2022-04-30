@@ -1,0 +1,47 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui1
+  labels:
+    app: ui1
+spec:
+  selector:
+    matchLabels:
+      app: ui1
+  template:
+    metadata:
+      labels:
+        app: ui1
+    spec:
+      containers:
+        - name: ui1
+          image: mdboetco.azurecr.io/ejb-sample-ui1:1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9080
+              protocol: TCP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ejb1
+  labels:
+    app: ejb1
+spec:
+  selector:
+    matchLabels:
+      app: ejb1
+  template:
+    metadata:
+      labels:
+        app: ejb1
+    spec:
+      hostname: ejb1
+      containers:
+        - name: ejb1
+          image: mdboetco.azurecr.io/ejb-sample-ejb1:1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 2829
+              protocol: TCP
