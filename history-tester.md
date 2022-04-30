@@ -3,8 +3,14 @@
 
 upper is newer.
 
+- [enabled to load command args](#enabled-to-load-command-args)
 - [enabled env file management](#enabled-env-file-management)
 - [created project](#created-project)
+
+## enabled to load command args
+
+- npm install commander
+- edited index.js
 
 ## enabled env file management
 
