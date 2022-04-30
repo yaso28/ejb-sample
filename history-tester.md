@@ -3,7 +3,16 @@
 
 upper is newer.
 
+- [enabled env file management](#enabled-env-file-management)
 - [created project](#created-project)
+
+## enabled env file management
+
+- npm install dotenv
+- touch .env
+- cp .env .env.example
+- touch .gitignore
+- edited index.js
 
 ## created project
 
