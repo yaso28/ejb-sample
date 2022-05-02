@@ -2,14 +2,13 @@
 <ejb-jar version="3.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/ejb-jar_3_2.xsd">
   <display-name>ejb1</display-name>
   <enterprise-beans>
-  	<session>
-  		<ejb-name>Info2Service</ejb-name>
-  		<home>com.yaso.ejb1.Info2ServiceHome</home>
-  		<remote>com.yaso.ejb1.Info2Service</remote>
-  		<ejb-class>com.yaso.ejb1.Info2ServiceBean</ejb-class>
-  		<session-type>Stateless</session-type>
-  		<transaction-type>Container</transaction-type>
-  	</session>
-
-</enterprise-beans>
+    <session>
+      <ejb-name>Info2Service</ejb-name>
+      <home>com.yaso.ejb1.Info2ServiceHome</home>
+      <remote>com.yaso.ejb1.Info2Service</remote>
+      <ejb-class>com.yaso.ejb1.Info2ServiceBean</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Container</transaction-type>
+    </session>
+  </enterprise-beans>
 </ejb-jar>
