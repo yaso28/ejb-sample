@@ -12,7 +12,7 @@
 
 開発環境：Java 8
 
-ローカルでビルド・実行する手順は[こちら](how-to-build.md)
+ビルド手順は[こちら](how-to-build.md)
 
 ## Docker
 
@@ -76,8 +76,31 @@ cd tester
 npm ci
 ```
 
+環境変数設定
+
+```bash
+cp .env.example
+```
+
+コピーした`.envファイルを編集します。
+
 ui1 infoテスト
 
 ```bash
 node index.js ui1 info
+```
+
+- オプション
+  - `-c`
+    - API呼び出し回数
+    - デフォルト：100回
+  - `-s`
+    - APIを飛び出す間隔（ms）
+    - デフォルト：100ms
+
+オプションを使った例
+
+```bash
+node index.js ui1 info -c 10 -s 1000
+node index.js ui1 info -h # ヘルプ表示
 ```
