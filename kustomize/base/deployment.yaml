@@ -26,6 +26,11 @@ spec:
           ports:
             - containerPort: 9080
               protocol: TCP
+        - name: netshoot
+          image: nicolaka/netshoot
+          imagePullPolicy: IfNotPresent
+          command: ["/bin/bash"]
+          args: ["-c", "while true; do ping localhost; sleep 60; done"]
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -55,3 +60,8 @@ spec:
           ports:
             - containerPort: 2829
               protocol: TCP
+        - name: netshoot
+          image: nicolaka/netshoot
+          imagePullPolicy: IfNotPresent
+          command: ["/bin/bash"]
+          args: ["-c", "while true; do ping localhost; sleep 60; done"]

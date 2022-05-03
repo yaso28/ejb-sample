@@ -104,3 +104,9 @@ node index.js ui1 info
 node index.js ui1 info -c 10 -s 1000
 node index.js ui1 info -h # ヘルプ表示
 ```
+
+## ネットワークパケットキャプチャ
+
+Kubernetesデプロイ時に、Podにパケットキャプチャ用コンテナを追加するように設定しています。
+
+パケットキャプチャの手順については[こちら](https://qiita.com/yaso28/items/8c4b3d687f0b0c02e39b)を参照。
